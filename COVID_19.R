@@ -893,6 +893,31 @@ cor(predictTaiwan, taiwanNew$ConfirmedNew)
 chinaBigRow <- subset(chinaNew, ConfirmedNew > 10000)
 chinaNew <- subset(chinaNew, ConfirmedNew < 10000)
 
+Country <- c("China", "Italy", "Iran", "Spain", "Germany", "US", "France", "South Korea", "Switzerland", "UK", "Taiwan")
+
+# draw the correlations by Linear Model of Iran
+CorrelationIran <- c(round(abs(cor(predictChina, chinaNew$ConfirmedNew))*100, digits=2),
+                      round(abs(cor(predictItaly, italyNew$ConfirmedNew))*100, digits=2),
+                      round(abs(cor(predictIran, testIran$ConfirmedNew))*100, digits=2),
+                      round(abs(cor(predictSpain, spainNew$ConfirmedNew))*100, digits=2),
+                      round(abs(cor(predictGermany, germanyNew$ConfirmedNew))*100, digits=2),
+                      round(abs(cor(predictUs, usNew$ConfirmedNew))*100, digits=2),
+                      round(abs(cor(predictFrance, franceNew$ConfirmedNew))*100, digits=2),
+                      round(abs(cor(predictKorea, koreaNew$ConfirmedNew))*100, digits=2),
+                      round(abs(cor(predictSwitzerland, switzerlandNew$ConfirmedNew))*100, digits=2),
+                      round(abs(cor(predictUK, ukNew$ConfirmedNew))*100, digits=2),
+                      round(abs(cor(predictTaiwan, taiwanNew$ConfirmedNew))*100, digits=2))
+
+
+iranCor <- data.frame(Country=Country, Correlation=CorrelationIran)
+
+ggplot(data=iranCor, aes(x=Country, y=Correlation, fill=Country)) + 
+  geom_bar(stat="identity") + 
+  ggtitle("Correlations by Linear Model of Iran") + 
+  ylab("Correlation (%)") +
+  geom_text(aes(label=Correlation), vjust=1.6, color="white", size=3.5)
+
+
 # combine
 allNew <- rbind(chinaNew, italyNew, spainNew, germanyNew, iranNew, 
                 usNew, franceNew, koreaNew, switzerlandNew, ukNew, taiwanNew)
@@ -1085,6 +1110,29 @@ cor(predictTaiwan, taiwanNew$ConfirmedNew)
 # [1] 0.4427289
 # the model is not suited for Taiwan, poor
 
+Country <- c("China", "Italy", "Iran", "Spain", "Germany", "US", "France", "South Korea", "Switzerland", "UK", "Taiwan")
+
+# draw the correlations by Linear Model of South Korea
+CorrelationKorea <- c(round(cor(predictChina, chinaNew$ConfirmedNew)*100, digits = 2),
+                      round(abs(cor(predictItaly, italyNew$ConfirmedNew))*100, digits = 2),
+                      round(abs(cor(predictIran, iranNew$ConfirmedNew))*100, digits = 2),
+                      round(abs(cor(predictSpain, spainNew$ConfirmedNew))*100, digits = 2),
+                      round(cor(predictGermany, germanyNew$ConfirmedNew)*100, digits = 2),
+                      round(abs(cor(predictUs, usNew$ConfirmedNew))*100, digits = 2),
+                      round(abs(cor(predictFrance, franceNew$ConfirmedNew))*100, digits = 2),
+                      round(cor(predictKorea, testKorea$ConfirmedNew)*100, digits = 2),
+                      round(cor(predictSwitzerland, switzerlandNew$ConfirmedNew)*100, digits = 2),
+                      round(abs(cor(predictUK, ukNew$ConfirmedNew))*100, digits = 2),
+                      round(cor(predictTaiwan, taiwanNew$ConfirmedNew)*100, digits = 2))
+
+
+koreaCor <- data.frame(Country=Country, Correlation=CorrelationKorea)
+
+ggplot(data=koreaCor, aes(x=Country, y=Correlation, fill=Country)) + 
+  geom_bar(stat="identity") + 
+  ggtitle("Correlations by Linear Model of South Korea") + 
+  ylab("Correlation (%)") +
+  geom_text(aes(label=Correlation), vjust=1.6, color="white", size=3.5)
 
 
 # 8. Prepare a report using techniques of “data storytelling” to present the results to a 
