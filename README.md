@@ -1,5 +1,9 @@
 # Analysis-of-Coronavirus-COVID-19-New-Confirmed-Cases
 The Analysis of Coronavirus (COVID-19) New Confirmed Cases Comparison Between Top 10 Countries and Taiwan
+
+
+![cover](https://raw.githubusercontent.com/mickyp/Analysis-of-Coronavirus-COVID-19-New-Confirmed-Cases/master/images/coronavirus-outbreak-title-s.png)
+
 ## Project Description
 Since the novel coronavirus (COVID-19 ) had spread all over the whole world, I want to find out how the new confirmed cases changed in the top 10 confirmed cases countries and my country, Taiwan. I use multiple linear regression to predict and fit between 11 countries, including China, Italy, Spain, Germany, Iran, the United States, France, South Korea, Switzerland, United Kindom, and Taiwan. Then I compare the trends of these countries and try to explain the differences and why the result comes out. The dataset I used collected confirmed, deaths, and recovered data from 179 countries from January 22, 2020, to March 18, 2020.
 ## Source of the Dataset
