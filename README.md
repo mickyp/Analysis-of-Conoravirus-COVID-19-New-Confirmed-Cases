@@ -8,7 +8,7 @@ Since the novel coronavirus (COVID-19 ) had spread all over the whole world, I w
 ## Contents
 | File| Description     |
 | ---------- | -----------| 
-|covid_19_data.csv| The dataset in csv format from 01.22.2020 to 03.18.2020| 
+|covid_19_data.csv| The dataset in csv format collected from 01.22.2020 to 03.18.2020| 
 |COVID_19.R|The codes of data analysis in R file|
 |report_covid19.pdf|The main report for normal audience|
 |report_covid19_tech_detail|The technical detail report for data scientists|
