@@ -9,6 +9,7 @@ Since the novel coronavirus (COVID-19 ) had spread all over the whole world, I w
 ## Source of the Dataset
 [covid_19_data.csv from kaggle](https://www.kaggle.com/sudalairajkumar/novel-corona-virus-2019-dataset#covid_19_data.csv)
 
+The **weekly updated** version is on Kaggle: [Analysis of Coronavirus (COVID-19) in Top 15](https://www.kaggle.com/mickyp100/analysis-of-coronavirus-covid-19-in-top-15)
 ## Contents
 | File| Description     |
 | ---------- | -----------| 
